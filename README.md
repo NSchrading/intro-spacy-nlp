@@ -17,6 +17,7 @@ python -m spacy.en.download all
 ```
 
 Make sure to run the above python command, this downloads the models that spaCy needs.
+Python 3 is recommended, although Python 2 should work as long as you convert the strings to unicode objects.
 
 ## Running the files
 
