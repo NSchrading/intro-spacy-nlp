@@ -1,14 +1,12 @@
 # Introduction to spaCy for NLP and Machine Learning
 
 ## Dependencies
-spaCy
+spacy
+scikit-learn
+nltk
 
-Scikit-learn
-
-NLTK
-
-To get the above requirements (except spaCy) download and install anaconda:
-https://store.continuum.io/cshop/anaconda/
+To get the above requirements (except spaCy), you can download and install the Python distribution called Anaconda (it contains a lot of commonly used scientific and generally useful Python packages):
+https://www.continuum.io/downloads
 
 To install spaCy:
 ```
@@ -16,7 +14,8 @@ pip install spacy
 python -m spacy.en.download all
 ```
 
-Make sure to run the above python command, this downloads the models that spaCy needs.
+Make sure to run the above python command, this downloads the models that spaCy needs. For those on slow connections, beware the model is about 530MB.
+
 Python 3 is recommended, although Python 2 should work as long as you convert the strings to unicode objects.
 
 ## Running the files
