@@ -21,4 +21,7 @@ Python 3 is recommended, although Python 2 should work as long as you convert th
 ## Running the files
 
 1. From the command line (cmd) or terminal navigate to where this readme and .ipynb file is.
-2. execute "ipython notebook Intro_spaCy_NLP"
+2. Run this command: 
+```
+jupyter notebook Intro_spaCy_NLP.ipynb
+```
