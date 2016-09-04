@@ -1,14 +1,14 @@
 # Introduction to spaCy for NLP and Machine Learning
 
 ## Dependencies
-spacy
-scikit-learn
-nltk
+spacy  
+scikit-learn  
+nltk  
 
-To get the above requirements (except spaCy), you can download and install the Python distribution called Anaconda (it contains a lot of commonly used scientific and generally useful Python packages):
+To get the above requirements (except spaCy), you can download and install the Python distribution called Anaconda (it contains a lot of commonly used scientific and generally useful Python packages):  
 https://www.continuum.io/downloads
 
-To install spaCy:
+To install spaCy:  
 ```
 pip install spacy
 python -m spacy.en.download all
@@ -21,7 +21,7 @@ Python 3 is recommended, although Python 2 should work as long as you convert th
 ## Running the files
 
 1. From the command line (cmd) or terminal navigate to where this readme and .ipynb file is.
-2. Run this command: 
+2. Run this command:  
 ```
 jupyter notebook Intro_spaCy_NLP.ipynb
 ```
