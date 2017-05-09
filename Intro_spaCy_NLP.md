@@ -280,6 +280,11 @@
 
 
 # spaCy has word vector representations built in!
+<!--
+Replace repvec by vector to avoid followings errors :
+AttributeError: 'spacy.lexeme.Lexeme' object has no attribute 'has_repvec'
+AttributeError: lex.repvec has been renamed to lex.vector
+-->
 
 
     from numpy import dot
@@ -292,10 +297,10 @@
     cosine = lambda v1, v2: dot(v1, v2) / (norm(v1) * norm(v2))
     
     # gather all known words, take only the lowercased versions
-    allWords = list({w for w in parser.vocab if w.has_repvec and w.orth_.islower() and w.lower_ != "nasa"})
+    allWords = list({w for w in parser.vocab if w.has_vector and w.orth_.islower() and w.lower_ != "nasa"})
     
     # sort by similarity to NASA
-    allWords.sort(key=lambda w: cosine(w.repvec, nasa.repvec))
+    allWords.sort(key=lambda w: cosine(w.vector, nasa.vector))
     allWords.reverse()
     print("Top 20 most similar words to NASA:")
     for word in allWords[:20]:   
@@ -307,12 +312,12 @@
     man = parser.vocab['man']
     woman = parser.vocab['woman']
     
-    result = king.repvec - man.repvec + woman.repvec
+    result = king.vector - man.vector + woman.vector
     
     # gather all known words, take only the lowercased versions
-    allWords = list({w for w in parser.vocab if w.has_repvec and w.orth_.islower() and w.lower_ != "king" and w.lower_ != "man" and w.lower_ != "woman"})
+    allWords = list({w for w in parser.vocab if w.has_vector and w.orth_.islower() and w.lower_ != "king" and w.lower_ != "man" and w.lower_ != "woman"})
     # sort by similarity to the result
-    allWords.sort(key=lambda w: cosine(w.repvec, result))
+    allWords.sort(key=lambda w: cosine(w.vector, result))
     allWords.reverse()
     print("\n----------------------------\nTop 3 closest results for king - man + woman:")
     for word in allWords[:3]:   
