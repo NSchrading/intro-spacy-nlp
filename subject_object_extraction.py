@@ -1,5 +1,5 @@
 from nltk.stem.wordnet import WordNetLemmatizer
-from spacy.en import English
+from spacy.lang.en import English
 
 SUBJECTS = ["nsubj", "nsubjpass", "csubj", "csubjpass", "agent", "expl"]
 OBJECTS = ["dobj", "dative", "attr", "oprd"]
